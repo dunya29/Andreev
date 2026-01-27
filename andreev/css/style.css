@@ -1884,7 +1884,7 @@ p a {
 }
 
 .work-stage__nmb {
-  line-height: 1;
+  line-height: 0.85;
   padding: 0 10px;
   overflow: hidden;
   position: relative;
@@ -1894,7 +1894,7 @@ p a {
   content: "";
   display: block;
   width: 100%;
-  height: 0 2em;
+  height: 0.5em;
   border-top: 1px solid var(--gray-color-light);
   background: var(--gray-color-bg);
   position: absolute;
@@ -2547,6 +2547,10 @@ p a {
   .work-stage__content h4,
   .work-stage__content .h4 {
     margin-bottom: 12px;
+  }
+
+  .work-stage__nmb:after {
+    height: 9px;
   }
 
   .work-formats__item-content p {
