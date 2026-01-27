@@ -199,19 +199,19 @@
         margin-bottom: 73px;
     }
     &__nmb {
-        line-height: 0.85;
+        line-height: 1;
         padding: 0 10px;
         border-bottom: 1px solid var(--gray-color-light);
         overflow: hidden;
         background: var(--gray-color-bg);
         position: relative;
-        top: -0.145em;
+        top: -0.2em;
         span {
             @include fz-90;
             color: var(--gray-color-light);
             display: block;
             position: relative;
-            top: 0.145em;
+            top: 0.2em;
         }
     }
     &__dur {
@@ -245,9 +245,9 @@
     }
     @media (max-width: $bp4) {
         &__nmb {
-            top: -10px;
+            top: -12px;
             span {
-                top: 12px;
+                top: 15px;
             }
         }
     }

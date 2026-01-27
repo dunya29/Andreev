@@ -1884,13 +1884,13 @@ p a {
 }
 
 .work-stage__nmb {
-  line-height: 0.85;
+  line-height: 1;
   padding: 0 10px;
   border-bottom: 1px solid var(--gray-color-light);
   overflow: hidden;
   background: var(--gray-color-bg);
   position: relative;
-  top: -0.145em;
+  top: -0.2em;
 }
 
 .work-stage__nmb span {
@@ -1900,7 +1900,7 @@ p a {
   color: var(--gray-color-light);
   display: block;
   position: relative;
-  top: 0.145em;
+  top: 0.2em;
 }
 
 .work-stage__dur {
@@ -3162,11 +3162,11 @@ p a {
   }
 
   .work-stage__nmb {
-    top: -10px;
+    top: -12px;
   }
 
   .work-stage__nmb span {
-    top: 12px;
+    top: 15px;
   }
 
   .work-formats__item {
