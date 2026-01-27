@@ -196,7 +196,7 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        margin-bottom: 73px;
+        margin-bottom: 60px;
     }
     &__nmb {
         line-height: 0.85;
@@ -240,7 +240,7 @@
     @media (max-width: $bp1) {
         padding: 16px;
         &__header {
-            margin-bottom: 56px;
+            margin-bottom: 44px;
         }
         &__content {
             h4,
@@ -251,8 +251,9 @@
     }
     @media (max-width: $bp1) {
         &__nmb {
+            line-height: 0.9;
             &:after {
-                height: 9px;
+                height: 12px;
             }
         }
     }
