@@ -168,7 +168,7 @@
         &__process-circle {
             width: 200px;
             p {
-                max-width: 185px
+                max-width: 185px;
             }
         }
     }
@@ -202,12 +202,15 @@
         padding: 0 10px;
         border-bottom: 1px solid var(--gray-color-light);
         overflow: hidden;
+        background: var(--gray-color-bg);
+        position: relative;
+        top: -0.21em;
         span {
             @include fz-90;
             color: var(--gray-color-light);
-            line-height: 0.65;
+            line-height: 1;
             display: block;
-            transform: translateY(0.05em);
+            transform: translateY(0.21em);
         }
     }
     &__dur {
@@ -236,6 +239,12 @@
             h4,
             .h4 {
                 margin-bottom: 12px;
+            }
+        }
+        &__nmb {
+            top: -0.19em;
+            span {
+                transform: translateY(0.19em);
             }
         }
     }
