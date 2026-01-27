@@ -1884,6 +1884,7 @@ p a {
 }
 
 .work-stage__nmb {
+  line-height: 1;
   padding: 0 10px;
   border-bottom: 1px solid var(--gray-color-light);
   overflow: hidden;
@@ -1897,7 +1898,6 @@ p a {
   font-weight: 500;
   white-space: nowrap;
   color: var(--gray-color-light);
-  line-height: 1;
   display: block;
   -webkit-transform: translateY(0.21em);
   -ms-transform: translateY(0.21em);

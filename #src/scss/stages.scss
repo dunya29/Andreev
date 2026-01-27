@@ -199,6 +199,7 @@
         margin-bottom: 73px;
     }
     &__nmb {
+        line-height: 1;
         padding: 0 10px;
         border-bottom: 1px solid var(--gray-color-light);
         overflow: hidden;
@@ -208,7 +209,6 @@
         span {
             @include fz-90;
             color: var(--gray-color-light);
-            line-height: 1;
             display: block;
             transform: translateY(0.21em);
         }
