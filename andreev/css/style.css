@@ -1886,11 +1886,20 @@ p a {
 .work-stage__nmb {
   line-height: 1;
   padding: 0 10px;
-  border-bottom: 1px solid var(--gray-color-light);
   overflow: hidden;
-  background: var(--gray-color-bg);
   position: relative;
-  top: -0.2em;
+}
+
+.work-stage__nmb:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0 2em;
+  border-top: 1px solid var(--gray-color-light);
+  background: var(--gray-color-bg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .work-stage__nmb span {
@@ -1899,8 +1908,6 @@ p a {
   white-space: nowrap;
   color: var(--gray-color-light);
   display: block;
-  position: relative;
-  top: 0.2em;
 }
 
 .work-stage__dur {
@@ -3159,14 +3166,6 @@ p a {
 
   .work-stage__nmb span {
     font-size: 70px;
-  }
-
-  .work-stage__nmb {
-    top: -12px;
-  }
-
-  .work-stage__nmb span {
-    top: 15px;
   }
 
   .work-formats__item {
