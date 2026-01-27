@@ -3172,6 +3172,16 @@ p a {
     font-size: 70px;
   }
 
+  .work-stage__nmb {
+    top: -14px;
+  }
+
+  .work-stage__nmb span {
+    -webkit-transform: translateY(14px);
+    -ms-transform: translateY(14px);
+    transform: translateY(14px);
+  }
+
   .work-formats__item {
     grid-template-columns: 1fr;
     gap: 12px;
