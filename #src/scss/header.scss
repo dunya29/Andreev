@@ -1,0 +1,300 @@
+.header {
+    background: var(--gray-color-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 501;
+    transition: transform 0.4s ease-out;
+    border-bottom: 1px solid var(--gray-color);
+    .text-btn {
+        @include fz-16;
+    }
+    &--main {
+        .header__logo {
+            pointer-events: none;
+        }
+    }
+    &__inner {
+        padding: 24px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__menu {
+        ul {
+            display: flex;
+            align-items: center;
+            margin: -16px 0;
+            li {
+                margin: 16px;
+                a {
+                    font-size: 16px;
+                    color: var(--gray-color);
+                    &:hover {
+                        color: var(--black-color);
+                    }
+                }
+            }
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        & > * {
+            margin-left: 16px;
+        }
+    }
+    @media (max-width: $bp1) {
+        &__inner {
+            padding: 16px 0;
+        }
+    }
+    @media (max-width: $bp2) {
+        &__menu {
+            ul {
+                margin: -10px 0;
+                li {
+                    margin: 10px;
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: $bp3) {
+        &__contacts {
+            margin-left: auto;
+        }
+        &__nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            padding-top: var(--header-h);
+            background: var(--gray-color-bg);
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s linear;
+            z-index: -1;
+            &.open {
+                visibility: visible;
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .container {
+                height: 100%;
+            }
+            .main-btn {
+                margin-top: 40px;
+            }
+            &-inner {
+                height: 100%;
+                padding: 20px 0;
+                background: var(--white-color);
+                border-top: 1px solid var(--gray-color);
+                overflow: auto;
+            }
+        }
+        &__menu {
+            ul {
+                flex-direction: column;
+                margin: 0;
+                li {
+                    width: 100%;
+                    margin: 0;
+                    border-bottom: 1px solid var(--gray-color);
+                    a {
+                        font-size: 19px;
+                        font-weight: 500;
+                        display: block;
+                        padding: 16px 12px;
+                    }
+                    &:first-child {
+                        border-top: 1px solid var(--gray-color);
+                    }
+                }
+            }
+        }
+    }
+}
+.icon-menu {
+    display: none;
+    @media (max-width: $bp3) {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        padding: 7px 10px;
+        display: block;
+        border-radius: 50%;
+        background: var(--black-color);
+        transition: all 500ms cubic-bezier(1, 0, 0.645, 0.65);
+        cursor: pointer;
+        margin-left: 10px;
+        &__items {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        &.active {
+            span {
+                &:nth-child(1) {
+                    top: 12px;
+                    animation: topbar-x 500ms;
+                    animation-fill-mode: both;
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    bottom: 12px;
+                    animation: bottombar-x 500ms;
+                    animation-fill-mode: both;
+                }
+            }
+        }
+        span {
+            display: block;
+            position: absolute;
+            background: var(--white-color);
+            width: 100%;
+            height: 2px;
+            transition: all 300ms;
+            &:nth-child(1) {
+                top: 5px;
+                animation: topbar-back 500ms;
+                animation-fill-mode: both;
+                animation-play-state: initial !important;
+            }
+            &:nth-child(2) {
+                top: 12px;
+                opacity: 1;
+            }
+            &:nth-child(3) {
+                bottom: 5px;
+                animation: bottombar-back 500ms;
+                animation-fill-mode: both;
+                animation-play-state: initial !important;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@keyframes topbar-x {
+    0% {
+        top: 5px;
+        transform: rotate(0deg);
+    }
+
+    45% {
+        top: 12px;
+        transform: rotate(145deg);
+    }
+
+    75% {
+        transform: rotate(130deg);
+    }
+
+    100% {
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes topbar-back {
+    0% {
+        top: 12px;
+        transform: rotate(135deg);
+    }
+
+    45% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        top: 5px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes bottombar-x {
+    0% {
+        bottom: 5px;
+        transform: rotate(0deg);
+    }
+
+    45% {
+        bottom: 12px;
+        transform: rotate(-145deg);
+    }
+
+    75% {
+        transform: rotate(-130deg);
+    }
+
+    100% {
+        transform: rotate(-135deg);
+    }
+}
+
+@keyframes bottombar-back {
+    0% {
+        bottom: 12px;
+        transform: rotate(-135deg);
+    }
+
+    45% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        bottom: 5px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes phone {
+    0% {
+        transform: rotate(0deg);
+    }
+    3% {
+        transform: rotate(10deg);
+    }
+    6% {
+        transform: rotate(0deg);
+    }
+    9% {
+        transform: rotate(-10deg);
+    }
+    12% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(10deg);
+    }
+    18% {
+        transform: rotate(0deg);
+    }
+    21% {
+        transform: rotate(-10deg);
+    }
+    24% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

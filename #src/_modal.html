@@ -1,0 +1,106 @@
+<!--cookie-->
+<div class="cookie fixed-block show" id="cookie-popup">
+    <div class="cookie__inner">
+        <div class="cookie__content">
+            <p>Наш сайт использует файлы cookie для улучшения работы, персонализации контента и проведения аналитики. Продолжая использовать сайт, вы соглашаетесь на
+                использование cookie в соответствии с нашей <a href="#" target="_blank">Политикой конфиденциальности</a>.</p>
+        </div>
+        <div class="cookie__btns">
+            <button class="btn main-btn" onclick="unshowCookie()"><span>Ок</span></button>
+        </div>
+    </div>
+</div>
+<!--fixed-btn-->
+<div class="fixed-btn desktop-hidden fixed-block">
+    <div class="container">
+        <button class="btn main-btn mod-open-btn" data-modal="feedback-mod">
+            <span>Записаться на&nbsp;консультацию</span>
+            <span class="link-icon"><svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg></span>
+        </button>
+    </div>
+</div>
+<!--modal-->
+<modal class="custom-scroll modal feedback-mod" id="feedback-mod">
+    <div class="modal__content">
+        <button type="button" class="btn btn-cross modal__close"></button>
+        <div class="custom-scroll">
+            <div class="modal__top">
+                <h2>Записаться на&nbsp;консультацию</h2>
+                <p>Оставьте ваши данные, и&nbsp;я&nbsp;свяжусь с&nbsp;Вами в&nbsp;течение 15&nbsp;минут</p>
+            </div>
+            <form class="form" onsubmit="event.preventDefault();formReset(this);openSuccessMod()">
+                <div class="form__items">
+                    <div class="item-form">
+                        <div class="item-form__inp">
+                            <input type="text" placeholder=" " class="required">
+                            <div class="item-form__placeholder">Ваше имя</div>
+                            <button type="button" class="btn-cross item-form__reset" aria-label="Очистить поле"></button>
+                        </div>
+                        <span data-error></span>
+                    </div>
+                    <div class="item-form">
+                        <div class="item-form__inp">
+                            <input type="tel" placeholder=" ">
+                            <div class="item-form__placeholder">Телефон</div>
+                            <button type="button" class="btn-cross item-form__reset" aria-label="Очистить поле"></button>
+                        </div>
+                        <span data-error></span>
+                    </div>
+                    <div class="item-form">
+                        <div class="item-form__inp">
+                            <input type="text" placeholder=" ">
+                            <div class="item-form__placeholder">Email</div>
+                            <button type="button" class="btn-cross item-form__reset" aria-label="Очистить поле"></button>
+                        </div>
+                        <span data-error></span>
+                    </div>
+                    <div class="item-form">
+                        <textarea placeholder="Ваш комментарий" oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+                    </div>
+                </div>
+                <div class="form__footer">
+                    <label class="item-checkbox">
+                        <input type="checkbox">
+                        <span>Нажимая на кнопку, я принимаю условия <a href="#" target="_blank">Политики конфиденциальности</a></span>
+                    </label>
+                    <button type="submit" class="btn main-btn main-btn--dark">
+                        <span>Отправить</span>
+                        <span class="link-icon"><svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</modal>
+<!--success-mod-->
+<modal class="custom-scroll modal success-mod" id="success-mod">
+    <div class="modal__content">
+        <button type="button" class="btn btn-cross modal__close"></button>
+        <div class="custom-scroll">
+            <div class="modal__top">
+                <div class="modal__icon"></div>
+                <h2></h2>
+                <p></p>
+            </div>
+            <button class="btn main-btn modal__close">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</modal>
+<!--error-mod-->
+<modal class="custom-scroll modal error-mod" id="error-mod">
+    <div class="modal__content">
+        <button type="button" class="btn btn-cross modal__close"></button>
+        <div class="custom-scroll">
+            <div class="modal__top">
+                <div class="modal__icon"></div>
+                <h2></h2>
+                <p></p>
+            </div>
+            <button class="btn main-btn modal__close">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</modal>

@@ -1,0 +1,107 @@
+.about {
+    &__items {
+        @include grid-2;
+    }
+    &__row {
+        @include grid-ratio-2-1;
+    }
+    &__img {
+        max-width: 697px;
+        img {
+            width: 100%;
+        }
+    }
+    &__info {
+        ul,
+        ol {
+            padding-left: 30px;
+        }
+        li {
+            @include fz-18;
+            margin-bottom: 24px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        ul li {
+            list-style: disc;
+            &::marker {
+                font-size: 24px;
+            }
+        }
+        ol li {
+            list-style: decimal;
+        }
+    }
+    @media (min-width: $bp1) {
+        &__items {
+            .item-about:nth-child(2n) {
+                justify-self: end;
+            }
+        }
+    }
+    @media (max-width: $bp1) {
+        &__info {
+            ul,
+            ol {
+                padding-left: 26px;
+            }
+            li {
+                margin-bottom: 12px;
+            }
+            ul li {
+                &::marker {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    @media (max-width: $bp2) {
+        &__info {
+            ul li {
+                &::marker {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @media (max-width: $bp4) {
+        &__items {
+            gap: 0;
+        }
+        &__row {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+.item-about {
+    padding: 16px 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-top: 1px solid var(--gray-color);
+    border-bottom: 1px solid var(--gray-color);
+    &__nmb {
+        @include fz-90;
+        line-height: 0.8;
+    }
+    &__lbl {
+        text-align: right;
+        margin-left: 20px;
+        @include fz-18;
+        color: var(--gray-color);
+    }
+    @media (min-width: $bp1) {
+        max-width: 523px;
+    }
+    @media (max-width: $bp1) {
+        &__lbl {
+            max-width: 356px;
+        }
+    }
+    @media (max-width: $bp4) {
+       &:not(:first-child) {
+        border-top: none;
+       }
+    }
+}

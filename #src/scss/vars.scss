@@ -1,0 +1,46 @@
+:root {
+    --content-width: 1484px;
+    --container-offset: 16px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    --font-family: "HelveticaNeue", sans-serif;
+    --black-color: #131313;
+    --white-color: #ffffff;
+    --gray-color: #939393;
+    --gray-color-light: #dfdfdf;
+    --gray-color-bg: #f5f5f5;
+    --error-color: #fe3b3b;
+    --scrollbar-color: transparent;
+    --scrollbar-thumb-color: #131313;
+    --header-h: 81px;
+    --main-offset: 20px;
+}
+
+$bp1: 1550.98px;
+$bp2: 1250.98px;
+$bp3: 1023.98px;
+$bp4: 767.98px;
+$bp5: 575.98px;
+$bp6: 479.98px;
+$bp7: 370.98px;
+@media (max-width: $bp1) {
+    :root {
+        --content-width: 1251px;
+        --header-h: 65px;
+    }
+}
+@media (max-width: $bp2) {
+    :root {
+        --content-width: 1024px;
+    }
+}
+@media (max-width: $bp3) {
+    :root {
+        --content-width: 900px;
+         --header-h: 72px;
+    }
+}
+@media (max-width: $bp4) {
+    :root {
+        --content-width: 576px;
+    }
+}

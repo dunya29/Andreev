@@ -1,0 +1,46 @@
+.exclusions {
+    &__items {
+        @include grid-4;
+    }
+    &__item {
+        min-height: 174px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: var(--gray-color-bg);
+        &--icon {
+            svg {
+                width: 100%;
+                max-width: 123px;
+            }
+        }
+    }
+    @media (max-width: $bp1) {
+        &__item {
+            padding: 16px;
+            &--icon {
+                svg {
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+    @media (min-width: $bp4) and (max-width: $bp3) {
+        &__items {
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @media (max-width: $bp3) {
+        &__item {
+            p {
+                max-width: 430px;
+            }
+            &--icon {
+                display: none;
+            }
+        }
+    }
+}

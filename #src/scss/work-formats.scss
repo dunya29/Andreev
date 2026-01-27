@@ -1,0 +1,27 @@
+.work-formats {
+    &__item {
+        padding: 24px 12px;
+        padding-left: calc(25% - 16px);
+        @include grid-ratio-2-1;
+        align-items: center;
+        border-top: 1px solid var(--black-color);
+        &:last-child {
+            border-bottom: 1px solid var(--black-color);
+        }
+    }
+    &__item-content {
+        p {
+            @include fz-18;
+        }
+    }
+    @media (max-width: $bp2) {
+        &__item {
+            padding: 16px 4px 16px calc(25% - 16px);
+        }
+    }
+    @media (max-width: $bp3) {
+        &__item {
+            padding: 16px 4px;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.final-step {
+    &__row {
+        @include grid-ratio-2-1;
+    }
+    &__content {
+        .h2 {
+            max-width: 548px;
+            margin-bottom: 24px;
+        }
+        p {
+            color: var(--gray-color);
+            max-width: 580px;
+        }
+        .main-btn {
+            margin-top: 40px;
+        }
+    }
+    &__bg {
+        padding: 25px;
+        display: flex;
+        border: 1px solid var(--black-color);
+        img {
+            aspect-ratio: 1;
+            width: 90%;
+            max-width: 207px;
+            object-fit: contain;
+            margin: auto;
+        }
+    }
+    @media (max-width: $bp6) {
+        &__bg {
+            min-height: 298px;
+        }
+    }
+}

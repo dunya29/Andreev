@@ -1,0 +1,31 @@
+.situations {
+    &__item {
+        padding: 16px 12px;
+        @include grid-ratio-1-2;
+        align-items: center;
+        border-top: 1px solid var(--gray-color);
+        &:last-child {
+            border-bottom: 1px solid var(--gray-color);
+        }
+    }
+    &__nmb {
+        color: var(--gray-color);
+    }
+}
+.key-issue {
+    @media (min-width: $bp4) {
+        position: relative;
+        .sec-title {
+            max-width: 33%;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            top: 3px;
+            left: 0;
+        }
+        .h2 {
+            line-height: 1;
+            text-indent: calc(33% + 16px);
+        }
+    }
+}

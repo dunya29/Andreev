@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "HelveticaNeue";
+    font-weight: 300;
+    font-style: normal;
+    src: local("HelveticaNeue Light"), local("HelveticaNeue-Light"), url("../fonts/HelveticaNeue-Light.woff2") format("woff2"), url("../fonts/HelveticaNeue-Light.woff") format("woff"), url("../fonts/HelveticaNeue-Light.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeue";
+    font-weight: 400;
+    font-style: normal;
+    src: local("HelveticaNeue Regular"), local("HelveticaNeue-Regular"), url("../fonts/HelveticaNeue-Regular.woff2") format("woff2"), url("../fonts/HelveticaNeue-Regular.woff") format("woff"), url("../fonts/HelveticaNeue-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeue";
+    font-weight: 500;
+    font-style: normal;
+    src: local("HelveticaNeue Medium"), local("HelveticaNeue-Medium"), url("../fonts/HelveticaNeue-Medium.woff2") format("woff2"), url("../fonts/HelveticaNeue-Medium.woff") format("woff"), url("../fonts/HelveticaNeue-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeue";
+    font-weight: 700;
+    font-style: normal;
+    src: local("HelveticaNeue Bold"), local("HelveticaNeue-Bold"), url("../fonts/HelveticaNeue-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeue-Bold.woff") format("woff"), url("../fonts/HelveticaNeue-Bold.ttf") format("truetype");
+    font-display: swap;
+}

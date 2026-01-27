@@ -1,0 +1,28 @@
+.pricing {
+    &__row {
+        @include grid-ratio-1-2-1;
+    }
+}
+.item-pricing {
+    &__lbl {
+        @include fz-16;
+        font-weight: 400;
+    }
+    &__content {
+        ol,
+        ul {
+            padding-left: 32px;
+        }
+        ol li {
+            list-style: decimal;
+        }
+        ul li {
+            list-style: disc;
+        }
+    }
+    @media (max-width: $bp2) {
+        &__lbl {
+            margin-bottom: 12px;
+        }
+    }
+}

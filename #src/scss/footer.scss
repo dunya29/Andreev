@@ -1,0 +1,50 @@
+.footer {
+    padding: 40px 0 20px;
+    background: var(--black-color);
+    &.animate {
+        .footer__logo img {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            opacity: 1;
+        }
+    }
+    &__nav {
+        margin-bottom: 20px;
+        ul {
+            @include grid-3;
+            li,
+            a {
+                @include fz-18;
+                color: var(--white-color);
+            }
+        }
+    }
+    &__logo {
+        max-width: 1920px;
+        margin: 0 auto 20px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 8%, 0 8%);
+            opacity: 0;
+            transition: all .7s linear;
+        }
+    }
+    &__bottom {
+        @include grid-4;
+        align-items: center;
+        p,
+        a {
+            @include fz-14;
+            color: var(--gray-color);
+        }
+    }
+    @media (max-width: $bp4) {
+        &__nav {
+            margin-bottom: 60px;
+            ul {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+    }
+}
