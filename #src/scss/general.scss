@@ -78,7 +78,8 @@ h1,
 	}
 }
 h2,
-.h2 {
+.h2,
+.page-content h1 {
 	font-size: 34px;
 	@media (max-width: $bp1) {
 		font-size: 28px;
@@ -89,6 +90,7 @@ h2,
 }
 h3,
 .h3,
+.page-content h2,
 .blockquote p {
 	font-size: 28px;
 	@media (max-width: $bp1) {
@@ -99,7 +101,8 @@ h3,
 	}
 }
 h4,
-.h4 {
+.h4,
+.page-content h3 {
 	font-size: 24px;
 	@media (max-width: $bp1) {
 		font-size: 20px;
@@ -210,23 +213,44 @@ p {
 	}
 	h1,
 	h2,
+	h3 {
+		margin-top: 40px;
+		@media (max-width: $bp2) {
+			margin-top: 32px;
+		}
+	}
+	h1,
+	h2,
 	h3,
 	h4,
 	h5,
 	h6,
-	p,
 	hr,
 	ol,
 	ul {
-		margin-bottom: 24px;
+		margin-bottom: 22px;
+		@media (max-width: $bp2) {
+			margin-bottom: 12px;
+		}
+	}
+	p,
+	li {
+		@include fz-18;
 	}
 	ol,
 	ul {
-		padding-left: 32px;
+		padding-left: 28px;
+		margin: 22px 0;
+		@media (max-width: $bp2) {
+			margin: 12px 0;
+		}
 	}
 	ol li,
 	ul li {
 		margin-bottom: 12px;
+		@media (max-width: $bp2) {
+			margin-bottom: 6px;
+		}
 	}
 	ol li {
 		list-style: decimal;
@@ -240,10 +264,17 @@ p {
 	video {
 		overflow: hidden;
 		margin: 32px 0;
+		@media (max-width: $bp2) {
+			margin: 22px 0;
+		}
 	}
 	table {
 		width: 100%;
 		display: block;
+		margin: 32px 0;
+		@media (max-width: $bp2) {
+			margin: 22px 0;
+		}
 		thead,
 		tbody {
 			display: table;
@@ -305,7 +336,9 @@ p {
 .main-btn {
 	padding: 20px 40px;
 	border-radius: 100px;
+	border: 1px solid var(--black-color);
 	background: var(--black-color);
+	animation: glowing 3s infinite alternate;
 	&:has(.link-icon) {
 		padding: 8px 8px 8px 40px;
 	}
@@ -318,6 +351,13 @@ p {
 			flex: 1 1 auto;
 			margin-left: 0;
 		}
+	}
+	&:hover, &:active {
+		background: #343434;
+	}
+	&:disabled {
+		opacity: 0.4;
+		pointer-events: none;
 	}
 	@media (max-width: $bp1) {
 		padding: 15px 24px;
@@ -333,6 +373,20 @@ p {
 				padding: 0 10px;
 			}
 		}
+	}
+}
+@keyframes glowing {
+	0% {
+		box-shadow: 0 0 -10px var(--black-color);
+	}
+	40% {
+		box-shadow: 0 0 10px var(--black-color);
+	}
+	60% {
+		box-shadow: 0 0 10px var(--black-color);
+	}
+	100% {
+		box-shadow: 0 0 -10px var(--black-color);
 	}
 }
 .text-btn {
@@ -779,5 +833,35 @@ p {
 			height: 40px;
 			padding: 10px;
 		}
+	}
+}
+.back-btn {
+	@include fz-18;
+	color: var(--gray-color);
+	display: inline-flex;
+	align-items: center;
+	svg {
+		fill: var(--black-color);
+		flex: 0 0 40px;
+		width: 40px;
+		height: 20px;
+		margin-right: 12px;
+	}
+	&:hover {
+		color: var(--black-color);
+	}
+	@media (max-width: $bp3) {
+		svg {
+			flex: 0 0 26px;
+			width: 26px;
+			height: 13px;
+			margin-right: 8px;
+		}
+	}
+}
+.page-top {
+	margin-bottom: 24px;
+	@media (max-width: $bp2) {
+		margin-bottom: 16px;
 	}
 }

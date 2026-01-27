@@ -299,7 +299,7 @@ input[type=number] {
   --scrollbar-color: transparent;
   --scrollbar-thumb-color: #131313;
   --header-h: 81px;
-  --main-offset: 20px;
+  --main-offset: 40px;
 }
 
 html,
@@ -388,18 +388,21 @@ h1,
 }
 
 h2,
-.h2 {
+.h2,
+.page-content h1 {
   font-size: 34px;
 }
 
 h3,
 .h3,
+.page-content h2,
 .blockquote p {
   font-size: 28px;
 }
 
 h4,
-.h4 {
+.h4,
+.page-content h3 {
   font-size: 24px;
 }
 
@@ -485,20 +488,31 @@ p a {
 
 .page-content h1,
 .page-content h2,
+.page-content h3 {
+  margin-top: 40px;
+}
+
+.page-content h1,
+.page-content h2,
 .page-content h3,
 .page-content h4,
 .page-content h5,
 .page-content h6,
-.page-content p,
 .page-content hr,
 .page-content ol,
 .page-content ul {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
+}
+
+.page-content p,
+.page-content li {
+  font-size: 18px;
 }
 
 .page-content ol,
 .page-content ul {
-  padding-left: 32px;
+  padding-left: 28px;
+  margin: 22px 0;
 }
 
 .page-content ol li,
@@ -525,6 +539,7 @@ p a {
 .page-content table {
   width: 100%;
   display: block;
+  margin: 32px 0;
 }
 
 .page-content table thead,
@@ -602,7 +617,10 @@ p a {
 .main-btn {
   padding: 20px 40px;
   border-radius: 100px;
+  border: 1px solid var(--black-color);
   background: var(--black-color);
+  -webkit-animation: glowing 3s infinite alternate;
+  animation: glowing 3s infinite alternate;
 }
 
 .main-btn:has(.link-icon) {
@@ -621,6 +639,60 @@ p a {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-left: 0;
+}
+
+.main-btn:hover,
+.main-btn:active {
+  background: #343434;
+}
+
+.main-btn:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    -webkit-box-shadow: 0 0 -10px var(--black-color);
+    box-shadow: 0 0 -10px var(--black-color);
+  }
+
+  40% {
+    -webkit-box-shadow: 0 0 10px var(--black-color);
+    box-shadow: 0 0 10px var(--black-color);
+  }
+
+  60% {
+    -webkit-box-shadow: 0 0 10px var(--black-color);
+    box-shadow: 0 0 10px var(--black-color);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 -10px var(--black-color);
+    box-shadow: 0 0 -10px var(--black-color);
+  }
+}
+
+@keyframes glowing {
+  0% {
+    -webkit-box-shadow: 0 0 -10px var(--black-color);
+    box-shadow: 0 0 -10px var(--black-color);
+  }
+
+  40% {
+    -webkit-box-shadow: 0 0 10px var(--black-color);
+    box-shadow: 0 0 10px var(--black-color);
+  }
+
+  60% {
+    -webkit-box-shadow: 0 0 10px var(--black-color);
+    box-shadow: 0 0 10px var(--black-color);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 -10px var(--black-color);
+    box-shadow: 0 0 -10px var(--black-color);
+  }
 }
 
 .text-btn {
@@ -1141,6 +1213,35 @@ p a {
 
 .social-list ul li a svg {
   fill: var(--white-color);
+}
+
+.back-btn {
+  font-size: 18px;
+  color: var(--gray-color);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.back-btn svg {
+  fill: var(--black-color);
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 20px;
+  margin-right: 12px;
+}
+
+.back-btn:hover {
+  color: var(--black-color);
+}
+
+.page-top {
+  margin-bottom: 24px;
 }
 
 .header {
@@ -2354,23 +2455,31 @@ p a {
   }
 
   h2,
-  .h2 {
+  .h2,
+  .page-content h1 {
     font-size: 28px;
   }
 
   h3,
   .h3,
+  .page-content h2,
   .blockquote p {
     font-size: 24px;
   }
 
   h4,
-  .h4 {
+  .h4,
+  .page-content h3 {
     font-size: 20px;
   }
 
   .section {
     margin-bottom: 100px;
+  }
+
+  .page-content p,
+  .page-content li {
+    font-size: 16px;
   }
 
   .sec-title {
@@ -2453,6 +2562,10 @@ p a {
   }
 
   .form__footer .item-checkbox span {
+    font-size: 16px;
+  }
+
+  .back-btn {
     font-size: 16px;
   }
 
@@ -2632,6 +2745,7 @@ p a {
 @media (max-width: 1250.98px) {
   :root {
     --content-width: 1024px;
+    --main-offset: 32px;
   }
 
   body {
@@ -2644,23 +2758,70 @@ p a {
   }
 
   h2,
-  .h2 {
+  .h2,
+  .page-content h1 {
     font-size: 24px;
   }
 
   h3,
   .h3,
+  .page-content h2,
   .blockquote p {
     font-size: 19px;
   }
 
   h4,
-  .h4 {
+  .h4,
+  .page-content h3 {
     font-size: 19px;
   }
 
   .section {
     margin-bottom: 80px;
+  }
+
+  .page-content h1,
+  .page-content h2,
+  .page-content h3 {
+    margin-top: 32px;
+  }
+
+  .page-content h1,
+  .page-content h2,
+  .page-content h3,
+  .page-content h4,
+  .page-content h5,
+  .page-content h6,
+  .page-content hr,
+  .page-content ol,
+  .page-content ul {
+    margin-bottom: 12px;
+  }
+
+  .page-content p,
+  .page-content li {
+    font-size: 14px;
+  }
+
+  .page-content ol,
+  .page-content ul {
+    margin: 12px 0;
+  }
+
+  .page-content ol li,
+  .page-content ul li {
+    margin-bottom: 6px;
+  }
+
+  .page-content img,
+  .page-content figure,
+  .page-content iframe,
+  .page-content video {
+    margin: 22px 0;
+  }
+
+  .page-content table {
+    margin: 22px 0;
   }
 
   .sec-title {
@@ -2732,6 +2893,14 @@ p a {
   .blockquote__content::before {
     width: 40px;
     height: 32px;
+  }
+
+  .back-btn {
+    font-size: 14px;
+  }
+
+  .page-top {
+    margin-bottom: 16px;
   }
 
   .header__menu ul {
@@ -2876,6 +3045,15 @@ p a {
     width: 40px;
     height: 40px;
     padding: 10px;
+  }
+
+  .back-btn svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 26px;
+    flex: 0 0 26px;
+    width: 26px;
+    height: 13px;
+    margin-right: 8px;
   }
 
   .header__contacts {

@@ -333,7 +333,7 @@ function fixedBtnVisibility() {
     }
     ), 100)
 }
-if (fixedBtn) {
+if (intro && fixedBtn) {
     fixedBtnVisibility()
     window.addEventListener("scroll", fixedBtnVisibility)
 }
@@ -424,9 +424,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 })
 AOS.init({
-    // offset: 120,
     duration: 700,
-    //  easing: 'ease-out',
     once: true,
 });
 if (footer) {

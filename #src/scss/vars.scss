@@ -12,7 +12,7 @@
     --scrollbar-color: transparent;
     --scrollbar-thumb-color: #131313;
     --header-h: 81px;
-    --main-offset: 20px;
+    --main-offset: 40px;
 }
 
 $bp1: 1550.98px;
@@ -31,6 +31,7 @@ $bp7: 370.98px;
 @media (max-width: $bp2) {
     :root {
         --content-width: 1024px;
+        --main-offset: 32px;
     }
 }
 @media (max-width: $bp3) {
