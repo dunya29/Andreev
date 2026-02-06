@@ -11,57 +11,10 @@
             width: 100%;
         }
     }
-    &__info {
-        ul,
-        ol {
-            padding-left: 30px;
-        }
-        li {
-            @include fz-18;
-            margin-bottom: 24px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-        ul li {
-            list-style: disc;
-            &::marker {
-                font-size: 24px;
-            }
-        }
-        ol li {
-            list-style: decimal;
-        }
-    }
     @media (min-width: $bp1) {
         &__items {
             .item-about:nth-child(2n) {
                 justify-self: end;
-            }
-        }
-    }
-    @media (max-width: $bp1) {
-        &__info {
-            ul,
-            ol {
-                padding-left: 26px;
-            }
-            li {
-                margin-bottom: 12px;
-            }
-            ul li {
-                &::marker {
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-    @media (max-width: $bp2) {
-        &__info {
-            ul li {
-                &::marker {
-                    font-size: 18px;
-                }
             }
         }
     }
@@ -71,6 +24,53 @@
         }
         &__row {
             grid-template-columns: 1fr;
+        }
+    }
+}
+.about__info,
+.item-case__sec {
+    p,
+    li {
+        @include fz-18;
+    }
+    ul,
+    ol {
+        padding-left: 30px;
+    }
+    li {
+        margin-bottom: 24px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    ul li {
+        list-style: disc;
+        &::marker {
+            font-size: 24px;
+        }
+    }
+    ol li {
+        list-style: decimal;
+    }
+    @media (max-width: $bp1) {
+        ul,
+        ol {
+            padding-left: 26px;
+        }
+        li {
+            margin-bottom: 12px;
+        }
+        ul li {
+            &::marker {
+                font-size: 20px;
+            }
+        }
+    }
+    @media (max-width: $bp2) {
+        ul li {
+            &::marker {
+                font-size: 18px;
+            }
         }
     }
 }
@@ -100,8 +100,8 @@
         }
     }
     @media (max-width: $bp4) {
-       &:not(:first-child) {
-        border-top: none;
-       }
+        &:not(:first-child) {
+            border-top: none;
+        }
     }
 }

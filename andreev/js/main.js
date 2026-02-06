@@ -241,9 +241,9 @@ function formReset(form) {
     if (form.querySelectorAll(".item-form__reset").length > 0) {
         form.querySelectorAll(".item-form__reset").forEach(item => item.classList.remove("show"))
     }
-    if (form.querySelectorAll("[data-error]").length > 0) {
+    /* if (form.querySelectorAll("[data-error]").length > 0) {
         form.querySelectorAll("[data-error]").forEach(item => item.textContent = '')
-    }
+    } */
     form.querySelectorAll("input").forEach(inp => {
         if (!["hidden", "checkbox", "radio"].includes(inp.type)) {
             inp.value = ""
@@ -389,34 +389,30 @@ function setCookie() {
     const date = new Date();
     date.setTime(date.getTime() + COOKIE_DAYS * 24 * 60 * 60 * 1000);
     const expires = "expires=" + date.toUTCString();
-    let cookieStr = `${COOKIE_NAME}=${encodeURIComponent(COOKIE_VALUE)}; ${expires}; path=/; SameSite=Lax`;
+    const baseDomain = location.hostname.replace(/^www\./, '');
+    const domainPart = baseDomain.includes('.') ? `; domain=.${baseDomain}` : '';
+    let cookieStr = `${COOKIE_NAME}=${encodeURIComponent(COOKIE_VALUE)}; ${expires}; path=/; SameSite=Lax${domainPart}`;
+
     if (location.protocol === 'https:') cookieStr += '; Secure';
     document.cookie = cookieStr;
 }
 function hasCookieAccepted() {
-    if (!document.cookie) {
-        return false
-    } else {
-        let pref = COOKIE_NAME + '=';
-        let cookieIdx = document.cookie.split('; ').findIndex(item => item.includes(pref))
-        if (cookieIdx < 0) {
-            return false
-        }
-        let cookieDecode = decodeURIComponent(document.cookie.split('; ')[cookieIdx].substring(pref.length))
-        return cookieDecode === COOKIE_VALUE ? true : false
-    }
+    try {
+        if (localStorage.getItem(COOKIE_NAME) === COOKIE_VALUE) return true;
+    } catch (e) { }
+
+    const v = document.cookie
+        .split('; ')
+        .find(row => row.startsWith(COOKIE_NAME + '='))
+        ?.split('=')[1];
+
+    return decodeURIComponent(v || '') === COOKIE_VALUE;
 }
+
 window.addEventListener("DOMContentLoaded", () => {
     if (cookiePopup) {
         if (!hasCookieAccepted()) {
             showCookie();
-            const cookieAccept = cookiePopup.querySelector(".cookie__accept")
-            if (cookieAccept) {
-                cookieAccept.addEventListener('click', () => {
-                    setCookie();
-                    unshowCookie()
-                });
-            }
         } else {
             unshowCookie();
         }
