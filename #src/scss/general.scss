@@ -19,7 +19,7 @@ body {
 	min-width: 320px;
 	background: var(--white-color);
 	font-family: var(--font-family);
-	font-size: 22px;
+	@include fz-22;
 	font-weight: 400;
 	line-height: 1.1;
 	letter-spacing: -0.02em;
@@ -30,12 +30,6 @@ body {
 	-webkit-tap-highlight-color: transparent;
 	word-break: break-word;
 	overflow-x: hidden;
-	@media (max-width: $bp1) {
-		font-size: 18px;
-	}
-	@media (max-width: $bp2) {
-		font-size: 16px;
-	}
 }
 .wrap {
 	height: 100%;
@@ -339,6 +333,9 @@ p {
 	border: 1px solid var(--black-color);
 	background: var(--black-color);
 	animation: glowing 3s infinite alternate;
+	&:last-child {
+		margin-bottom: 10px;
+	}
 	&:has(.link-icon) {
 		padding: 8px 8px 8px 40px;
 	}

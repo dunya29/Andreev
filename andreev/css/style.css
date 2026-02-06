@@ -623,6 +623,10 @@ p a {
   animation: glowing 3s infinite alternate;
 }
 
+.main-btn:last-child {
+  margin-bottom: 10px;
+}
+
 .main-btn:has(.link-icon) {
   padding: 8px 8px 8px 40px;
 }
@@ -2206,6 +2210,19 @@ p a {
   margin-bottom: 12px;
 }
 
+.cases .page-row .page-content {
+  max-width: 738px;
+}
+
+.cases .page-row .page-content p,
+.cases .page-row .page-content li {
+  font-size: 22px;
+}
+
+.cases .page-row__aside .h2 {
+  max-width: 300px;
+}
+
 .cases__items {
   display: grid;
   gap: 16px;
@@ -2821,6 +2838,11 @@ p a {
     padding: 16px;
   }
 
+  .cases .page-row .page-content p,
+  .cases .page-row .page-content li {
+    font-size: 18px;
+  }
+
   .footer__nav ul li,
   .footer__nav ul a {
     font-size: 16px;
@@ -3135,6 +3157,11 @@ p a {
 
   .item-case__title {
     min-height: 38px;
+  }
+
+  .cases .page-row .page-content p,
+  .cases .page-row .page-content li {
+    font-size: 16px;
   }
 
   .item-faq {

@@ -53,6 +53,26 @@
     }
 }
 .cases {
+    .page-row {
+        .page-content {
+            max-width: 738px;
+            p,
+            li {
+                font-size: 22px;
+                @media (max-width: $bp1) {
+                    font-size: 18px;
+                }
+                @media (max-width: $bp2) {
+                    font-size: 16px;
+                }
+            }
+        }
+        &__aside {
+            .h2 {
+                max-width: 300px;
+            }
+        }
+    }
     &__items {
         @include grid-3;
     }
