@@ -1404,11 +1404,11 @@ p a {
 }
 
 .header__menu ul li {
+  font-size: 16px;
   margin: 16px;
 }
 
 .header__menu ul li a {
-  font-size: 16px;
   color: var(--gray-color);
 }
 
@@ -3365,14 +3365,14 @@ p a {
   }
 
   .header__menu ul li {
+    font-size: 19px;
+    font-weight: 500;
     width: 100%;
     margin: 0;
     border-bottom: 1px solid var(--gray-color);
   }
 
   .header__menu ul li a {
-    font-size: 19px;
-    font-weight: 500;
     display: block;
     padding: 16px 12px;
   }
@@ -3988,7 +3988,7 @@ p a {
 }
 
 @media (min-width: 1250.98px) and (max-width: 1550.98px) {
-  .header__menu ul li a {
+  .header__menu ul li {
     font-size: 14px;
   }
 }
