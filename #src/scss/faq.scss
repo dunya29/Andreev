@@ -1,9 +1,5 @@
 .item-faq {
     padding: 24px 12px;
-    border-top: 1px solid var(--black-color);
-    &:last-child {
-        border-bottom: 1px solid var(--black-color);
-    }
     .page-content {
         max-width: calc(100% / 9 * 6);
         padding-top: 24px;

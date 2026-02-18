@@ -7,9 +7,6 @@
     z-index: 501;
     transition: transform 0.4s ease-out;
     border-bottom: 1px solid var(--gray-color);
-    .text-btn {
-        @include fz-16;
-    }
     &--main {
         .header__logo {
             pointer-events: none;
@@ -21,10 +18,15 @@
         align-items: center;
         justify-content: space-between;
     }
+    &__logo {
+        width: 229px;
+    }
     &__menu {
         ul {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            justify-content: center;
             margin: -16px 0;
             li {
                 margin: 16px;
@@ -33,6 +35,9 @@
                     color: var(--gray-color);
                     &:hover {
                         color: var(--black-color);
+                    }
+                    @media (min-width: $bp2) and (max-width: $bp1) {
+                        font-size: 14px;
                     }
                 }
             }
@@ -52,19 +57,6 @@
         }
     }
     @media (max-width: $bp2) {
-        &__menu {
-            ul {
-                margin: -10px 0;
-                li {
-                    margin: 10px;
-                    a {
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-    }
-    @media (max-width: $bp3) {
         &__contacts {
             margin-left: auto;
         }
@@ -91,8 +83,22 @@
             .container {
                 height: 100%;
             }
+            .main-btn, .link-btn {
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
             .main-btn {
                 margin-top: 40px;
+            }
+            .link-btn {
+                font-size: 19px;
+                padding: 16px 12px;
+                display: flex;
+                justify-content: flex-start;
+                border-bottom: 1px solid var(--gray-color);
+                border-top: 1px solid var(--gray-color);
+                margin-top: 60px;
             }
             &-inner {
                 height: 100%;
@@ -126,7 +132,7 @@
 }
 .icon-menu {
     display: none;
-    @media (max-width: $bp3) {
+    @media (max-width: $bp2) {
         flex-shrink: 0;
         width: 40px;
         height: 40px;

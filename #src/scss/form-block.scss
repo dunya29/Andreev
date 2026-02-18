@@ -1,0 +1,36 @@
+.form-block {
+    .h4 {
+        max-width: 500px;
+    }
+    .media-cover {
+        padding-top: 100%;
+        grid-row-end: span 3;
+    }
+    .page-content {
+        li {
+            color: var(--gray-color);
+        }
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px 40px;
+        align-items: start;
+    }
+    @media (max-width: $bp1) {
+        &__inner {
+            gap: 16px;
+        }
+    }
+    @media (max-width: $bp4) {
+        .h4 {
+            align-self: center;
+        }
+        .media-cover {
+            grid-row-end: span 1;
+        }
+        &__content {
+            grid-column: 1/3;
+        }
+    }
+}

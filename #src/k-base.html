@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Александр Андреев - Эксперт по IT-конфликтам"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                <!--page-top-->
+                <div class="page-top">
+                    <div class="container">
+                        @@include('_breadcrumbs.html', {"page": "База знаний"})
+                    </div>
+                </div>
+                <!--articles-->
+                <section class="section articles">
+                    <div class="container">
+                        <div class="mb-24">
+                            <h1>База знаний</h1>
+                        </div>
+                        <ul class="articles__items">
+                            <li data-aos="fade-up">
+                                <a href="#" class="item-article">
+                                    <h3 class="h4">Почему устные договорённости не&nbsp;работают в&nbsp;суде?</h3>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="100">
+                                <a href="#" class="item-article">
+                                    <h3 class="h4">ТОП-5 юридических ошибок в&nbsp;IT-проектах</h3>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="200">
+                                <a href="#" class="item-article">
+                                    <h3 class="h4">Как правильно оформлять “митинг-минуты”: шаблоны и&nbsp;лучшие практики</h3>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <a href="#" class="item-article">
+                                    <h3 class="h4">Согласование изменений в&nbsp;проекте: зачем фиксировать всё письменно</h3>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="400">
+                                <a href="#" class="item-article">
+                                    <h3 class="h4">Как правильно выбрать подрядчика?</h3>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="500">
+                                <a href="#" class="item-article">
+                                    <h3 class="h4">Договор vs. Реальные отношения: как&nbsp;защитить себя</h3>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="600">
+                                <a href="#" class="item-article">
+                                    <h3 class="h4">Как убедить команду фиксировать договорённости официально</h3>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="700">
+                                <a href="#" class="item-article">
+                                    <h3 class="h4">Архивирование переписки: что&nbsp;важно хранить?</h3>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mt-40 text-center" data-aos="fade-up" data-aos-delay="800">
+                            <button class="btn main-btn">
+                                <span>смотреть больше</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('_footer.html')
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>

@@ -1,0 +1,32 @@
+.breadcrumbs {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        li {
+            @include fz-18;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            opacity: 0.4;
+            &:before {
+                content: "";
+                display: block;
+                width: 32px;
+                height: 16px;
+                background: url(../img/svg/arrow-r.svg) center / contain no-repeat;
+                filter: invert(67%) sepia(5%) saturate(8%) hue-rotate(345deg) brightness(87%) contrast(86%);
+                margin: 0 10px;
+            }
+            &:first-child:before {
+                display: none;
+            }
+            &:last-child {
+                opacity: 1;
+            }
+            a {
+                color: var(--primary-color);
+            }
+        }
+    }
+}

@@ -155,12 +155,12 @@ p {
 	}
 }
 .desktop-hidden {
-	@media (min-width: $bp3) {
+	@media (min-width: $bp2) {
 		display: none;
 	}
 }
 .mob-hidden {
-	@media (max-width: $bp3) {
+	@media (max-width: $bp2) {
 		display: none;
 	}
 }
@@ -230,6 +230,9 @@ p {
 	p,
 	li {
 		@include fz-18;
+	}
+	p {
+		margin-bottom: 16px;
 	}
 	ol,
 	ul {
@@ -388,7 +391,9 @@ p {
 	}
 }
 .text-btn {
+	@include fz-16;
 	position: relative;
+	margin-bottom: 1px;
 	&::after {
 		content: "";
 		position: absolute;
@@ -460,6 +465,21 @@ p {
 	&:hover:after {
 		width: 100%;
 		left: 0;
+	}
+}
+.link-btn {
+	@include fz-16;
+	text-transform: none;
+	&__icon {
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-left: 6px;
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: var(--black-color);
+		}
 	}
 }
 .item-form {
@@ -733,6 +753,14 @@ p {
 		content: " ₽";
 	}
 }
+.mb-80,
+.mb-40,
+.mb-32,
+.mb-24 {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
 .mb-80 {
 	margin-bottom: 80px;
 	@media (max-width: $bp2) {
@@ -757,6 +785,45 @@ p {
 		margin-bottom: 20px;
 	}
 }
+.mt-80,
+.mt-40,
+.mt-32,
+.mt-24 {
+	&:first-child {
+		margin-top: 0;
+	}
+}
+.mt-40 {
+	margin-top: 40px;
+	@media (max-width: $bp2) {
+		margin-top: 32px;
+	}
+}
+.text-center {
+	text-align: center;
+}
+.blockquote,
+.form-block {
+	.media-cover {
+		width: 140px;
+		height: 140px;
+		border-radius: 50%;
+		background: var(--gray-color-bg);
+		border: 1px solid #dadada;
+	}
+	@media (max-width: $bp2) {
+		.media-cover {
+			width: 100px;
+			height: 100px;
+		}
+	}
+	@media (max-width: $bp4) {
+		.media-cover {
+			width: 60px;
+			height: 60px;
+		}
+	}
+}
 .blockquote {
 	width: 100%;
 	max-width: 740px;
@@ -768,13 +835,6 @@ p {
 		color: var(--gray-color);
 		display: block;
 		margin-top: 16px;
-	}
-	.media-cover {
-		width: 140px;
-		height: 140px;
-		border-radius: 50%;
-		background: var(--gray-color-bg);
-		border: 1px solid #dadada;
 	}
 	&__content {
 		align-self: center;
@@ -796,21 +856,11 @@ p {
 		cite {
 			margin-top: 12px;
 		}
-		.media-cover {
-			width: 100px;
-			height: 100px;
-		}
 		&__content {
 			&::before {
 				width: 40px;
 				height: 32px;
 			}
-		}
-	}
-	@media (max-width: $bp4) {
-		.media-cover {
-			width: 60px;
-			height: 60px;
 		}
 	}
 }
@@ -834,7 +884,7 @@ p {
 			}
 		}
 	}
-	@media (max-width: $bp3) {
+	@media (max-width: $bp2) {
 		li a {
 			width: 40px;
 			height: 40px;
@@ -870,5 +920,11 @@ p {
 	margin-bottom: 24px;
 	@media (max-width: $bp2) {
 		margin-bottom: 16px;
+	}
+}
+.container-sm {
+	@media (min-width: $bp3) {
+		max-width: calc(50% - 8px);
+		margin: 0 auto;
 	}
 }
