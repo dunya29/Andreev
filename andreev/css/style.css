@@ -1323,7 +1323,7 @@ p a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  opacity: 0.4;
+  color: var(--gray-color);
 }
 
 .breadcrumbs ul li:before {
@@ -1342,11 +1342,11 @@ p a {
 }
 
 .breadcrumbs ul li:last-child {
-  opacity: 1;
+  color: var(--black-color);
 }
 
 .breadcrumbs ul li a {
-  color: var(--primary-color);
+  color: var(--gray-color);
 }
 
 .header {
@@ -3911,6 +3911,23 @@ p a {
 }
 
 @media (max-width: 575.98px) {
+  .breadcrumbs ul {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow: auto;
+    scrollbar-width: none;
+    margin: 0 calc(var(--container-offset) * -1);
+    padding: 0 var(--container-offset);
+  }
+
+  .breadcrumbs ul ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .breadcrumbs ul li {
+    white-space: nowrap;
+  }
+
   .modal__content .custom-scroll {
     scrollbar-width: none;
   }

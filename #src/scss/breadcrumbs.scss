@@ -8,7 +8,7 @@
             margin-bottom: 8px;
             display: flex;
             align-items: center;
-            opacity: 0.4;
+            color: var(--gray-color);
             &:before {
                 content: "";
                 display: block;
@@ -22,11 +22,26 @@
                 display: none;
             }
             &:last-child {
-                opacity: 1;
+                color: var(--black-color);
             }
             a {
-                color: var(--primary-color);
+                color: var(--gray-color);
             }
         }
     }
+     @media (max-width: $bp5) {
+            ul {
+                flex-wrap: nowrap;
+                overflow: auto;
+                scrollbar-width: none;
+                margin: 0 calc(var(--container-offset) * -1);
+                padding: 0 var(--container-offset);
+                ::-webkit-scrollbar {
+                    display: none;
+                }
+                li {
+                    white-space: nowrap;
+                }
+            }
+        }
 }
