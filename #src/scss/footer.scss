@@ -7,6 +7,11 @@
             opacity: 1;
         }
     }
+    .link-btn {
+        svg {
+            fill: var(--white-color);
+        }
+    }
     &__nav {
         margin-bottom: 20px;
         ul {

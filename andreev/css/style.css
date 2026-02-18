@@ -2451,6 +2451,10 @@ p a {
   opacity: 1;
 }
 
+.footer .link-btn svg {
+  fill: var(--white-color);
+}
+
 .footer__nav {
   margin-bottom: 20px;
 }
