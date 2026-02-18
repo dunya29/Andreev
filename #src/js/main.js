@@ -121,9 +121,9 @@ function smoothDrop(header, body, dur = false) {
 const customScroll = document.querySelectorAll(".custom-scroll")
 let isFirefox = typeof InstallTrigger !== 'undefined';
 if (isFirefox) {
-    document.documentElement.style.scrollbarColor = "#41536D #E6ECFF"
+    document.documentElement.style.scrollbarColor = "#131313 transparent"
     if (customScroll.length) {
-        customScroll.forEach(item => { item.style.scrollbarColor = "#ff9bbf transparent" })
+        customScroll.forEach(item => { item.style.scrollbarColor = "#131313 transparent" })
     }
 }
 //anchor

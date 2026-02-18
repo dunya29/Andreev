@@ -465,6 +465,10 @@ p a {
   overflow: hidden;
 }
 
+.section:has([data-aos]) {
+  padding-bottom: 1px;
+}
+
 .page-row {
   display: grid;
   gap: 16px;

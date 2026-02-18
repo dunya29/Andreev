@@ -178,6 +178,9 @@ p {
 .section {
 	margin-bottom: 120px;
 	overflow: hidden;
+	&:has([data-aos]) {
+		padding-bottom: 1px;
+	}
 	@media (max-width: $bp1) {
 		margin-bottom: 100px;
 	}
