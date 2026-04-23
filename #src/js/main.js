@@ -164,9 +164,10 @@ function closeModal(modal) {
         modal.querySelectorAll("video").forEach(item => item.pause())
     }
     modal.classList.remove("open")
+    $('#js-overlay').remove();
     setTimeout(() => {
         enableScroll()
-    }, animSpd);
+    }, 100);
 }
 // modal click outside
 if (modal.length) {
