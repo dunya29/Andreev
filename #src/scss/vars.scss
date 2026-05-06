@@ -4,10 +4,13 @@
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
     --font-family: "HelveticaNeue", sans-serif;
     --black-color: #131313;
+    --black-color-rgb: 19, 19, 19;
     --white-color: #ffffff;
+    --white-color-rgb: 255, 255, 255;
     --gray-color: #939393;
     --gray-color-light: #dfdfdf;
     --gray-color-bg: #f5f5f5;
+    --gray-color-bg-rgb: 245, 245, 245;
     --error-color: #fe3b3b;
     --scrollbar-color: transparent;
     --scrollbar-thumb-color: #131313;
@@ -37,7 +40,7 @@ $bp7: 370.98px;
 @media (max-width: $bp3) {
     :root {
         --content-width: 900px;
-         --header-h: 72px;
+        --header-h: 72px;
     }
 }
 @media (max-width: $bp4) {

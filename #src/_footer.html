@@ -2,17 +2,69 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__top">
-            <nav class="u-margin-l-25 footer__nav">
-                <ul>
-                    <li><a href="#about" class="js-anchor">[&nbsp;Почему я?&nbsp;]</a></li>
-                    <li><a href="#pricing" class="js-anchor">[&nbsp;Стоимость работы&nbsp;]</a></li>
-                    <li><a href="#" class="js-anchor" target="_blank">[&nbsp;Telegram&nbsp;]</a></li>
-                    <li><a href="#work-stages" class="js-anchor">[&nbsp;Как проходит работа&nbsp;]</a></li>
-                    <li><a href="#faq" class="js-anchor">[&nbsp;FAQ&nbsp;]</a></li>
-                    <li>
-                        <a href="#" class="btn link-btn">
+            <nav class="container-sm menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__item-header">
+                            <span>Услуги</span>
+                            <svg><use xlink:href="img/svg/sprite.svg#chevron-bot"></use></svg>
+                        </a>
+                        <nav class="submenu">
+                            <div class="custom-scroll submenu__inner">
+                                <div class="submenu__items">
+                                    <div class="submenu__item">
+                                        <div class="submenu__item-lbl">[Диагностика]</div>
+                                        <ul>
+                                            <li><a href="#">Аудит IT-проекта</a></li>
+                                            <li><a href="#">Экспертиза команды разработки</a></li>
+                                            <li><a href="#">Техническая оценка кандидатов</a></li>
+                                            <li><a href="#">Проверка качества кода</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu__item">
+                                        <div class="submenu__item-lbl">[Архитектура]</div>
+                                        <ul>
+                                            <li><a href="#">Roadmap проекта (план разработки)</a></li>
+                                            <li><a href="#">Архитектура решения</a></li>
+                                            <li><a href="#">Выбор технологий</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu__item">
+                                        <div class="submenu__item-lbl">[Сопровождение]</div>
+                                        <ul>
+                                            <li><a href="#">Менеджер IT-проектов</a></li>
+                                            <li><a href="#">Сопровождение IT-проекта (Управление подрядчиками)</a></li>
+                                            <li><a href="#">Подбор подрядчика</a></li>
+                                            <li><a href="#">CTO-консультант</a></li>
+                                            <li><a href="#">CTO-консультант для&nbsp;агентств</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu__item">
+                                        <div class="submenu__item-lbl">[Урегулирование конфликтов]</div>
+                                        <ul>
+                                            <li><a href="#">Урегулирование конфликтов с&nbsp;IT-подрядчиком</a></li>
+                                            <li><a href="#">Независимая техническая экспертиза</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__item-header">
                             <span>База знаний</span>
-                            <span class="link-btn__icon"><svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg></span>
+                            <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__item-header">
+                            <span>Стоимость</span>
+                            <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--social">
+                        <a href="#" class="menu__item-header">
+                            <span>[Telegram]</span>
                         </a>
                     </li>
                 </ul>
@@ -21,8 +73,6 @@
     </div>
     <div class="footer__logo" aria-hidden="true">
         <img src="img/svg/andreev-footer.svg" alt>
-        <!-- <img src="img/svg/footer-logo-part-1.svg" alt="">
-        <img src="img/svg/footer-logo-part-2.svg" alt=""> -->
     </div>
     <div class="container">
         <div class="footer__bottom">

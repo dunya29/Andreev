@@ -1,5 +1,56 @@
 .intro {
     position: relative;
+    &.intro--price {
+        &:before {
+            background-image: url(../img/svg/andreev.svg), url(../img/svg/intro-icon-bg.svg), url(../img/svg/intro-icon-2-bg.svg);
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-position:
+                center bottom,
+                left 46% bottom 69%,
+                left 86% bottom 88%;
+            background-size:
+                100% auto,
+                33% auto,
+                16% auto;
+            @media (min-width: 1900px) {
+                background-size:
+                    1920px auto,
+                    595px auto,
+                    300px auto;
+            }
+        }
+        .intro__content {
+            p {
+                color: var(--gray-color);
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+            ul {
+                padding-left: 30px;
+                li {
+                    list-style-type: disc;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        @media (min-width: $bp4) {
+            .intro__main {
+                max-width: 50%;
+            }
+        }
+        @media (max-width: $bp4) {
+            &:before {
+                background-position:
+                    center bottom,
+                    left 10% bottom 32%,
+                    left 98% bottom 31%;
+                background-size:
+                    clamp(100px, 200%, 730px) auto,
+                    clamp(100px, 60%, 253px) auto,
+                    clamp(100px, 40%, 118px) auto;
+            }
+        }
+    }
     &:before {
         content: "";
         display: block;
@@ -13,12 +64,12 @@
             left 46% bottom 69%;
         background-size:
             100% auto,
-            35% auto;
+            33% auto;
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        @media (min-width: 1920px) {
+        @media (min-width: 1900px) {
             background-size:
                 1920px auto,
                 595px auto;
@@ -32,12 +83,14 @@
         width: 100%;
         max-width: 55%;
         padding: 65px 0;
+        & > * {
+            margin-bottom: 24px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
     &__content {
-        margin-bottom: 40px;
-        &:last-child {
-            margin-bottom: 0;
-        }
         h1,
         .h1 {
             margin-bottom: 32px;
@@ -46,7 +99,21 @@
             max-width: 688px;
         }
     }
+    &__labels {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 16px;
+        span {
+            @include fz-16;
+            color: var(--gray-color);
+        }
+    }
     &__bottom {
+        margin-top: 40px;
+        &:first-child {
+            margin-top: 0;
+        }
         p {
             @include fz-14;
             color: var(--gray-color);
@@ -79,6 +146,11 @@
             }
         }
     }
+    &__price {
+        span {
+            display: block;
+        }
+    }
     @media (max-width: $bp1) {
         &__row {
             min-height: calc(650px - var(--header-h));
@@ -109,7 +181,6 @@
             padding: 50px 0;
         }
         &__content {
-            margin-bottom: 30px;
             h1,
             .h1 {
                 margin-bottom: 16px;
@@ -119,6 +190,7 @@
             }
         }
         &__bottom {
+            margin-top: 32px;
             p {
                 margin-top: 12px;
             }
@@ -141,15 +213,15 @@
     }
     @media (max-width: $bp4) {
         &:before {
-             background-position:
+            background-position:
                 center bottom,
-                left 10% bottom 33%;
+                left 10% bottom 32%;
             background-size:
-                200% auto,
-                60% auto;
+                clamp(100px, 200%, 730px) auto,
+                clamp(100px, 60%, 253px) auto;
         }
         &__row {
-            min-height: none;
+            min-height: 660px;
             padding-top: var(--main-offset);
         }
         &__main {

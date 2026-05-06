@@ -28,11 +28,6 @@
             }
         }
     }
-    @media (min-width: $bp4) and (max-width: $bp3) {
-        &__items {
-            grid-template-columns: repeat(3,1fr);
-        }
-    }
     @media (max-width: $bp3) {
         &__item {
             p {

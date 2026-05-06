@@ -1,0 +1,102 @@
+.articles,
+.article {
+    @media (min-width: $bp3) {
+        overflow: clip;
+        .page-row__aside {
+            position: sticky;
+            top: calc(var(--header-h) + 10px);
+        }
+    }
+}
+.articles {
+    &__nav {
+        li {
+            margin-bottom: 12px;
+        }
+        a {
+            font-weight: 300;
+            display: block;
+            padding: 10px 12px;
+            background: var(--gray-color-bg);
+            &.active {
+                color: var(--white-color);
+                background: var(--black-color);
+            }
+        }
+    }
+    &__items {
+        li {
+            border-top: 1px solid var(--gray-color);
+            &:last-child {
+                border-bottom: 1px var(--gray-color);
+            }
+            a:hover {
+                color: var(--gray-color);
+            }
+        }
+    }
+}
+.item-article {
+    display: block;
+    padding: 20px 12px;
+    @media (max-width: $bp2) {
+        padding: 16px 4px;
+    }
+}
+.nav-anchors {
+    padding: 20px 16px;
+    background: var(--gray-color-bg);
+    .h4 {
+        margin-bottom: 16px;
+    }
+    nav {
+        li {
+            border-bottom: 1px solid var(--gray-color-light);
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+        a {
+            @include fz-18;
+            display: block;
+            padding: 12px 0;
+            &:hover {
+                color: var(--gray-color);
+            }
+        }
+    }
+    @media (max-width: $bp4) {
+        padding: 16px;
+    }
+}
+.article {
+    @media (min-width: $bp3) {
+        .page-row {
+            row-gap: 24px;
+            &__aside {
+                grid-row: 1/3;
+            }
+        }
+    }
+}
+.related-articles {
+    &__items{
+        @include grid-4;
+    }
+    &__item {
+        min-height: 128px;
+        height: 100%;
+        padding: 20px 12px;
+        border: 1px solid var(--gray-color);
+        &:hover span{
+            color: var(--gray-color);
+        }
+        span {
+            transition:  all .3s linear;
+        }
+        @media (max-width: $bp2) {
+            min-height: 100px;
+            padding: 16px 12px;
+        }
+    }
+}

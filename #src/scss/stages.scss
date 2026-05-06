@@ -12,7 +12,7 @@
             }
         }
     }
-    @media (min-width: $bp2) {
+    @media (min-width: $bp3) {
         &__items {
             .tech-stage:nth-child(3) {
                 grid-column: 4/5;
@@ -20,11 +20,6 @@
             .tech-stage:nth-child(5) {
                 grid-column: 3/4;
             }
-        }
-    }
-    @media (max-width: $bp2) {
-        &__items {
-            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
@@ -85,11 +80,6 @@
         color: var(--gray-color);
         margin-bottom: 12px;
     }
-    &__note {
-        .h2 {
-            text-indent: 9.5em;
-        }
-    }
     &__processes {
         @include grid-3;
         gap: 0;
@@ -113,6 +103,7 @@
     }
     &__process-circle {
         flex: 1 1 auto;
+        padding: 12px;
         aspect-ratio: 1;
         background: var(--black-color);
         display: flex;

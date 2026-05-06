@@ -164,9 +164,10 @@ function closeModal(modal) {
         modal.querySelectorAll("video").forEach(item => item.pause())
     }
     modal.classList.remove("open")
+    $('#js-overlay').remove();
     setTimeout(() => {
         enableScroll()
-    }, animSpd);
+    }, 100);
 }
 // modal click outside
 if (modal.length) {
@@ -436,3 +437,44 @@ if (footer) {
     })
     footerObserver.observe(footer);
 }
+// menu
+const menuItem = document.querySelectorAll(".menu__item ")
+menuItem.forEach(item => {
+    const header = item.querySelector(".menu__item-header")
+    const subMenu = item.querySelector(".submenu")
+    if (!subMenu) return;
+    item.addEventListener("mouseenter", () => {
+        item.style.setProperty('--top-position', item.offsetTop + item.clientHeight + "px")
+        item.classList.add("show")
+    })
+    item.addEventListener("mouseleave", () => {
+        item.classList.remove("show")
+    })
+    if (header) {
+        header.addEventListener("click", e => {
+            if (window.innerWidth < bp.laptop) {
+                e.preventDefault()
+                item.classList.remove("show")
+                const activeItem = document.querySelector(".menu__item-header.active")
+                if (activeItem) {
+                    smoothDrop(activeItem, activeItem.closest(".menu__item").querySelector(".submenu"))
+                }
+                smoothDrop(header, subMenu)
+                setTimeout(() => {
+                    if (header.classList.contains("active")) {
+                        const clickOutside = (e) => {
+                            if (!document.querySelector(".menu").contains(e.target)) {
+                                const activeItem = document.querySelector(".menu__item-header.active")
+                                if (activeItem) {
+                                    smoothDrop(activeItem, activeItem.closest(".menu__item").querySelector(".submenu"))
+                                }
+                                document.removeEventListener('click', clickOutside);
+                            }
+                        };
+                        document.addEventListener("click", clickOutside);
+                    }
+                }, 0);
+            }
+        })
+    }
+})

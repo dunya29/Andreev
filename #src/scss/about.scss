@@ -28,7 +28,8 @@
     }
 }
 .about__info,
-.item-case__sec {
+.item-case__sec,
+.item-format__sec {
     p,
     li {
         @include fz-18;

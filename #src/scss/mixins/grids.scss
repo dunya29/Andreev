@@ -2,9 +2,22 @@
     @include grid;
     grid-template-columns: repeat(6, 1fr);
 }
+@mixin grid-5 {
+    @include grid;
+    grid-template-columns: repeat(5, 1fr);
+    @media (max-width: $bp3){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $bp4) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 @mixin grid-4 {
     @include grid;
     grid-template-columns: repeat(4, 1fr);
+    @media (max-width: $bp3) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 @mixin grid-3 {
     @include grid;

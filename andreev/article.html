@@ -36,18 +36,69 @@
                 <div class="header__nav">
                     <div class="header__nav-inner">
                         <div class="container">
-                            <nav class="header__menu">
-                                <ul>
-                                    <li><a href="#about" class="js-anchor">[&nbsp;Почему я?&nbsp;]</a></li>
-                                    <li><a href="#work-stages" class="js-anchor">[&nbsp;Как проходит работа&nbsp;]</a></li>
-                                    <li><a href="#pricing" class="js-anchor">[&nbsp;Стоимость работы&nbsp;]</a></li>
-                                    <li><a href="#faq" class="js-anchor">[&nbsp;FAQ&nbsp;]</a></li>
+                            <nav class="menu">
+                                <ul class="menu__list">
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__item-header">
+                                            <span>Услуги</span>
+                                            <svg><use xlink:href="img/svg/sprite.svg#chevron-bot"></use></svg>
+                                        </a>
+                                        <nav class="submenu">
+                                            <div class="custom-scroll submenu__inner">
+                                                <div class="submenu__items">
+                                                    <div class="submenu__item">
+                                                        <div class="submenu__item-lbl">[Диагностика]</div>
+                                                        <ul>
+                                                            <li><a href="#">Аудит IT-проекта</a></li>
+                                                            <li><a href="#">Экспертиза команды разработки</a></li>
+                                                            <li><a href="#">Техническая оценка кандидатов</a></li>
+                                                            <li><a href="#">Проверка качества кода</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="submenu__item">
+                                                        <div class="submenu__item-lbl">[Архитектура]</div>
+                                                        <ul>
+                                                            <li><a href="#">Roadmap проекта (план разработки)</a></li>
+                                                            <li><a href="#">Архитектура решения</a></li>
+                                                            <li><a href="#">Выбор технологий</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="submenu__item">
+                                                        <div class="submenu__item-lbl">[Сопровождение]</div>
+                                                        <ul>
+                                                            <li><a href="#">Менеджер IT-проектов</a></li>
+                                                            <li><a href="#">Сопровождение IT-проекта (Управление подрядчиками)</a></li>
+                                                            <li><a href="#">Подбор подрядчика</a></li>
+                                                            <li><a href="#">CTO-консультант</a></li>
+                                                            <li><a href="#">CTO-консультант для&nbsp;агентств</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="submenu__item">
+                                                        <div class="submenu__item-lbl">[Урегулирование конфликтов]</div>
+                                                        <ul>
+                                                            <li><a href="#">Урегулирование конфликтов с&nbsp;IT-подрядчиком</a></li>
+                                                            <li><a href="#">Независимая техническая экспертиза</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__item-header">
+                                            <span>База знаний</span>
+                                            <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__item-header">
+                                            <span>Стоимость</span>
+                                            <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                                        </a>
+                                    </li>
                                 </ul>
                             </nav>
-                            <a href="#" class="btn link-btn desktop-hidden">
-                                <span>База знаний</span>
-                                <span class="link-btn__icon"><svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg></span>
-                            </a>
                             <button class="btn main-btn desktop-hidden mod-open-btn" data-modal="feedback-mod">
                                 <span>Записаться на&nbsp;консультацию</span>
                                 <span class="link-icon"><svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg></span>
@@ -55,10 +106,6 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn link-btn mob-hidden">
-                    <span>База знаний</span>
-                    <span class="link-btn__icon"><svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg></span>
-                </a>
                 <div class="header__contacts">
                     <button class="btn text-btn mob-hidden mod-open-btn" data-modal="feedback-mod"><span>Записаться на&nbsp;консультацию</span></button>
                     <div class="social-list">
@@ -97,70 +144,112 @@
 </div>
                     </div>
                 </div>
-                <!--text-p-->
-                <section class="section text-p">
+                <!--article-->
+                <section class="section article">
                     <div class="container">
-                        <div class="container-sm text-p__inner">
-                            <div class="mb-24 text-p__top">
-                                <h1 class="h2">Почему устные договорённости не работают в суде?</h1>
+                        <div class="page-row">
+                            <div class="article__top">
+                                <div class="container-sm">
+                                    <h1 class="h2">Почему устные договорённости не работают в суде?</h1>
+                                </div>
                             </div>
-                            <div class="page-content">
-                                <p>Представьте ситуацию. Вы ведёте проект уже полтора года. За это время были десятки созвонов, сотни сообщений в Telegram, бесконечные
-                                    голосовые и
-                                    пересылки файлов. Заказчик регулярно менял требования, сдвигал сроки, добавлял задачи «на ходу». Вы шли навстречу, договаривались устно,
-                                    старались сохранить отношения.</p>
-                                <h3>Как устроена реальность проектных коммуникаций</h3>
-                                <p>Как устроена реальность проектных коммуникаций</p>
-                                <p>На подавляющем большинстве проектов — от небольших заказов для малого бизнеса до крупных корпоративных внедрений — рабочее общение ведётся в
-                                    мессенджерах и на созвонах. Telegram, WhatsApp, Slack, Microsoft Teams — вот реальные каналы, по которым принимаются решения,
-                                    согласовываются
-                                    изменения и обсуждаются проблемы.</p>
-                                <p>Электронная почта используется в лучшем случае для отправки документов. А чаще — не используется вообще.</p>
-                                <p>И это понятно. Мессенджеры быстрее. Созвоны эффективнее. Неформальное общение помогает строить доверие и решать вопросы без бюрократии.</p>
-                                <p>Но есть одна проблема. Попытка перевести общение в более формальное русло почти всегда воспринимается как враждебный жест. Стоит написать
-                                    письмо
-                                    по электронной почте вместо сообщения в чат — и у другой стороны возникает тревога. Стоит сослаться на пункт договора — и вас мысленно
-                                    записывают в «конфликтных» и «токсичных».</p>
-                                <p>В проектной культуре сложилась негласная норма: формальность = недоверие. И поэтому все стараются оставаться в зоне комфорта неформального
-                                    общения как можно дольше. Часто — до самого конца проекта.</p>
-                                <picture><source srcset="img/content/article.webp" type="image/webp"><img src="img/content/article.jpg" alt></picture>
-                                <h3>Как устроена реальность суда</h3>
-                                <p>Судебная система живёт в совершенно другой логике.</p>
-                                <p>Для суда не имеет значения, насколько тёплыми были ваши отношения с контрагентом. Суду неинтересно, что «мы обо всём договаривались на
-                                    созвонах»
-                                    или «в чате всё видно». Суд оперирует юридически значимыми фактами — и в первую очередь смотрит на то, что было зафиксировано по каналам
-                                    связи,
-                                    определённым в договоре.</p>
-                                <p>Вот как это выглядит на практике:</p>
-                                <ul>
-                                    <li>Отсутствие официальных претензий = согласие. Если вы два года не направляли ни одного письма о проблемах по адресу из договора, суд
-                                        может
-                                        расценить это как отсутствие претензий с вашей стороны. Вы молчали — значит, вас всё устраивало.</li>
-                                    <li>Голосовые и чаты — слабое доказательство. Переписка в мессенджерах может быть принята судом, но её доказательная сила значительно ниже,
-                                        чем
-                                        у электронной почты, указанной в договоре. Её нужно нотариально заверять, доказывать принадлежность аккаунтов, бороться с возражениями
-                                        другой стороны.</li>
-                                    <li>Фиксация = действие. Для суда важно не только то, что проблема существовала, но и то, что вы действовали: уведомляли, требовали,
-                                        фиксировали. Нет действий — нет позиции.</li>
-                                </ul>
-                                <p>Получается парадоксальная ситуация. В рабочей среде ссылаться на договор — «токсично». В суде — жизненно необходимо. И между этими двумя
-                                    реальностями лежит пропасть, в которую проваливается огромное количество проектов.</p>
-                                <h3>Две параллельные реальности</h3>
-                                <p>Две параллельные реальности</p>
-                                <p>По сути, любой проект существует одновременно в двух измерениях:</p>
-                                <p>Операционное измерение — здесь важно быстро принимать решения, не буксовать в бюрократии, поддерживать хорошие отношения с заказчиком или
-                                    подрядчиком. Здесь ценятся гибкость, скорость и человечность.</p>
-                                <p>Юридическое измерение — здесь важны документы, даты, формулировки, подтверждения и факты. Здесь нет места эмоциям, зато есть чёткая логика:
-                                    «было зафиксировано или нет?»</p>
-                                <p>Ошибка большинства проектов — полностью игнорировать юридическое измерение, пока всё идёт хорошо. А когда становится плохо — обнаруживать,
-                                    что
-                                    за несколько лет работы не накопилось ни одного документа, подтверждающего вашу позицию.</p>
-                                <p>Это как жить без медицинской страховки: пока здоров — кажется ненужной тратой. Когда заболел — уже поздно оформлять.</p>
+                            <div class="page-row__aside">
+                                <div class="nav-anchors">
+                                    <div class="h4">Содержание</div>
+                                    <nav>
+                                        <ul>
+                                            <li><a class="js-anchor" href="#chapter-1">Как устроена реальность проектных коммуникаций</a></li>
+                                            <li><a class="js-anchor" href="#chapter-2">Как устроена реальность суда</a></li>
+                                            <li><a class="js-anchor" href="#chapter-3">Две параллельные реальности</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="page-row__content">
+                                <div class="container-sm">
+                                    <div class="page-content">
+                                        <p>Представьте ситуацию. Вы ведёте проект уже полтора года. За это время были десятки созвонов, сотни сообщений в Telegram,
+                                            бесконечные
+                                            голосовые и
+                                            пересылки файлов. Заказчик регулярно менял требования, сдвигал сроки, добавлял задачи «на ходу». Вы шли навстречу,
+                                            договаривались
+                                            устно,
+                                            старались сохранить отношения.</p>
+                                        <h3 id="chapter-1">Как устроена реальность проектных коммуникаций</h3>
+                                        <p>На подавляющем большинстве проектов — от небольших заказов для малого бизнеса до крупных корпоративных внедрений — рабочее
+                                            общение
+                                            ведётся в
+                                            мессенджерах и на созвонах. Telegram, WhatsApp, Slack, Microsoft Teams — вот реальные каналы, по которым принимаются решения,
+                                            согласовываются
+                                            изменения и обсуждаются проблемы.</p>
+                                        <p>Электронная почта используется в лучшем случае для отправки документов. А чаще — не используется вообще.</p>
+                                        <p>И это понятно. Мессенджеры быстрее. Созвоны эффективнее. Неформальное общение помогает строить доверие и решать вопросы без
+                                            бюрократии.</p>
+                                        <p>Но есть одна проблема. Попытка перевести общение в более формальное русло почти всегда воспринимается как враждебный жест. Стоит
+                                            написать
+                                            письмо
+                                            по электронной почте вместо сообщения в чат — и у другой стороны возникает тревога. Стоит сослаться на пункт договора — и вас
+                                            мысленно
+                                            записывают в «конфликтных» и «токсичных».</p>
+                                        <p>В проектной культуре сложилась негласная норма: формальность = недоверие. И поэтому все стараются оставаться в зоне комфорта
+                                            неформального
+                                            общения как можно дольше. Часто — до самого конца проекта.</p>
+                                        <picture><source srcset="img/content/article.webp" type="image/webp"><img src="img/content/article.jpg" alt></picture>
+                                        <h3 id="chapter-2">Как устроена реальность суда</h3>
+                                        <p>Для суда не имеет значения, насколько тёплыми были ваши отношения с контрагентом. Суду неинтересно, что «мы обо всём
+                                            договаривались
+                                            на
+                                            созвонах»
+                                            или «в чате всё видно». Суд оперирует юридически значимыми фактами — и в первую очередь смотрит на то, что было зафиксировано
+                                            по
+                                            каналам
+                                            связи,
+                                            определённым в договоре.</p>
+                                        <p>Вот как это выглядит на практике:</p>
+                                        <ul>
+                                            <li>Отсутствие официальных претензий = согласие. Если вы два года не направляли ни одного письма о проблемах по адресу из
+                                                договора,
+                                                суд
+                                                может
+                                                расценить это как отсутствие претензий с вашей стороны. Вы молчали — значит, вас всё устраивало.</li>
+                                            <li>Голосовые и чаты — слабое доказательство. Переписка в мессенджерах может быть принята судом, но её доказательная сила
+                                                значительно
+                                                ниже,
+                                                чем
+                                                у электронной почты, указанной в договоре. Её нужно нотариально заверять, доказывать принадлежность аккаунтов, бороться с
+                                                возражениями
+                                                другой стороны.</li>
+                                            <li>Фиксация = действие. Для суда важно не только то, что проблема существовала, но и то, что вы действовали: уведомляли,
+                                                требовали,
+                                                фиксировали. Нет действий — нет позиции.</li>
+                                        </ul>
+                                        <p>Получается парадоксальная ситуация. В рабочей среде ссылаться на договор — «токсично». В суде — жизненно необходимо. И между
+                                            этими
+                                            двумя
+                                            реальностями лежит пропасть, в которую проваливается огромное количество проектов.</p>
+                                        <h3 id="chapter-3">Две параллельные реальности</h3>
+                                        <p>По сути, любой проект существует одновременно в двух измерениях:</p>
+                                        <p>Операционное измерение — здесь важно быстро принимать решения, не буксовать в бюрократии, поддерживать хорошие отношения с
+                                            заказчиком
+                                            или
+                                            подрядчиком. Здесь ценятся гибкость, скорость и человечность.</p>
+                                        <p>Юридическое измерение — здесь важны документы, даты, формулировки, подтверждения и факты. Здесь нет места эмоциям, зато есть
+                                            чёткая
+                                            логика:
+                                            «было зафиксировано или нет?»</p>
+                                        <p>Ошибка большинства проектов — полностью игнорировать юридическое измерение, пока всё идёт хорошо. А когда становится плохо —
+                                            обнаруживать,
+                                            что
+                                            за несколько лет работы не накопилось ни одного документа, подтверждающего вашу позицию.</p>
+                                        <p>Это как жить без медицинской страховки: пока здоров — кажется ненужной тратой. Когда заболел — уже поздно оформлять.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="section form-block">
+                <!--form-block-->
+                <section class="section form-block" data-aos="fade-up">
                     <div class="container">
                         <div class="container-sm form-block__inner">
                             <div class="media-cover"><picture><source srcset="img/form_ava.webp" type="image/webp"><img src="img/form_ava.png" alt="Alexander Andreev"></picture></div>
@@ -173,30 +262,199 @@
                                             понятным и&nbsp;управляемым.</li>
                                     </ul>
                                 </div>
-                                <button class="btn main-btn mod-open-btn" data-modal="feedback-mod">
-                                    <span>Оставить заявку</span>
-                                    <span class="link-icon"><svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg></span>
-                                </button>
+                                <div class="form-block__btns">
+                                    <div class="form-block__btn">
+                                        <button class="btn main-btn mod-open-btn" data-modal="feedback-mod">
+                                            <span>Записаться на&nbsp;консультацию </span>
+                                            <span class="link-icon"><svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg></span>
+                                        </button>
+                                        <span class="form-block__note">*&nbsp;бесплатно</span>
+                                    </div>
+                                    <div class="form-block__btn">
+                                        <button class="btn stroke-btn mod-open-btn" data-modal="question-mod">
+                                            <span>задать вопрос</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                 <!--related-articles-->
+<section class="section related-articles">
+    <div class="container">
+        <div class="mb-24 u-max-w-25">
+            <h2 class="sec-title">[&nbsp;&nbsp;Опыт&nbsp;&nbsp;]</h2>
+            <h3 class="h2">Статьи по теме</h3>
+        </div>
+        <div class="related-articles__items">
+            <a href="#" class="related-articles__item" data-aos="fade-up">
+                <span class="h4">ТОП-5 юридических ошибок в&nbsp;IT-проектах</span>
+            </a>
+            <a href="#" class="related-articles__item" data-aos="fade-up" data-aos-delay="100">
+                <span class="h4">Почему устные договорённости не&nbsp;работают в&nbsp;суде?</span>
+            </a>
+            <a href="#" class="related-articles__item" data-aos="fade-up" data-aos-delay="200">
+                <span class="h4">Как правильно выбрать подрядчика?</span>
+            </a>
+            <a href="#" class="related-articles__item" data-aos="fade-up" data-aos-delay="300">
+                <span class="h4">Как правильно оформлять «митинг-минуты»: шаблоны и&nbsp;лучшие практики</span>
+            </a>
+            <a href="#" class="related-articles__item" data-aos="fade-up" data-aos-delay="400">
+                <span class="h4">Как правильно оформлять «митинг-минуты»: шаблоны и&nbsp;лучшие практики</span>
+            </a>
+            <a href="#" class="related-articles__item" data-aos="fade-up" data-aos-delay="500">
+                <span class="h4">ТОП-5 юридических ошибок в&nbsp;IT-проектах</span>
+            </a>
+            <a href="#" class="related-articles__item" data-aos="fade-up" data-aos-delay="600">
+                <span class="h4">Почему устные договорённости не&nbsp;работают в&nbsp;суде?</span>
+            </a>
+            <a href="#" class="related-articles__item" data-aos="fade-up" data-aos-delay="700">
+                <span class="h4">Как правильно выбрать подрядчика?</span>
+            </a>
+        </div>
+        <div class="mt-40 text-center" data-aos="fade-up">
+            <a href="#" class="btn main-btn">
+                <span>Перейти в базу знаний</span>
+            </a>
+        </div>
+    </div>
+</section>
+                 <!--services-->
+<section class="section services">
+    <div class="container">
+        <div class="mb-24 u-max-w-25">
+            <h2>Релевантные услуги</h2>
+        </div>
+        <div class="services__items">
+            <a href="#" class="services__item" data-aos="fade-left">
+                <p>Техническая оценка кандидатов</p>
+                <div class="link-icon">
+                    <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                </div>
+            </a>
+            <a href="#" class="services__item" data-aos="fade-left" data-aos-delay="100">
+                <p>Выбор технологий</p>
+                <div class="link-icon">
+                    <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                </div>
+            </a>
+            <a href="#" class="services__item" data-aos="fade-left" data-aos-delay="200">
+                <div class="hot-icon"><img src="img/svg/icons/fire.svg" alt></div>
+                <p>Roadmap проекта (план разработки)</p>
+                <div class="link-icon">
+                    <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                </div>
+            </a>
+            <a href="#" class="services__item" data-aos="fade-left" data-aos-delay="300">
+                <p>Сопровождение IT-проекта (Управление подрядчиками)</p>
+                <div class="link-icon">
+                    <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                </div>
+            </a>
+            <a href="#" class="services__item" data-aos="fade-left" data-aos-delay="400">
+                <div class="hot-icon"><img src="img/svg/icons/fire.svg" alt></div>
+                <p>Roadmap проекта (план разработки)</p>
+                <div class="link-icon">
+                    <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                </div>
+            </a>
+            <a href="#" class="services__item" data-aos="fade-left" data-aos-delay="500">
+                <p>Техническая оценка кандидатов</p>
+                <div class="link-icon">
+                    <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                </div>
+            </a>
+            <a href="#" class="services__item" data-aos="fade-left" data-aos-delay="600">
+                <p>Выбор технологий</p>
+                <div class="link-icon">
+                    <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                </div>
+            </a>
+            <a href="#" class="services__item" data-aos="fade-left" data-aos-delay="700">
+                <p>Техническая оценка кандидатов</p>
+                <div class="link-icon">
+                    <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                </div>
+            </a>
+        </div>
+        
+        <div class="mt-40 text-center" data-aos="fade-up">
+            <a href="#" class="btn main-btn">
+                <span>Перейти в базу знаний</span>
+            </a>
+        </div>
+        
+    </div>
+</section>
             </main>
             <!--footer-->
 <footer class="footer">
     <div class="container">
         <div class="footer__top">
-            <nav class="u-margin-l-25 footer__nav">
-                <ul>
-                    <li><a href="#about" class="js-anchor">[&nbsp;Почему я?&nbsp;]</a></li>
-                    <li><a href="#pricing" class="js-anchor">[&nbsp;Стоимость работы&nbsp;]</a></li>
-                    <li><a href="#" class="js-anchor" target="_blank">[&nbsp;Telegram&nbsp;]</a></li>
-                    <li><a href="#work-stages" class="js-anchor">[&nbsp;Как проходит работа&nbsp;]</a></li>
-                    <li><a href="#faq" class="js-anchor">[&nbsp;FAQ&nbsp;]</a></li>
-                    <li>
-                        <a href="#" class="btn link-btn">
+            <nav class="container-sm menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__item-header">
+                            <span>Услуги</span>
+                            <svg><use xlink:href="img/svg/sprite.svg#chevron-bot"></use></svg>
+                        </a>
+                        <nav class="submenu">
+                            <div class="custom-scroll submenu__inner">
+                                <div class="submenu__items">
+                                    <div class="submenu__item">
+                                        <div class="submenu__item-lbl">[Диагностика]</div>
+                                        <ul>
+                                            <li><a href="#">Аудит IT-проекта</a></li>
+                                            <li><a href="#">Экспертиза команды разработки</a></li>
+                                            <li><a href="#">Техническая оценка кандидатов</a></li>
+                                            <li><a href="#">Проверка качества кода</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu__item">
+                                        <div class="submenu__item-lbl">[Архитектура]</div>
+                                        <ul>
+                                            <li><a href="#">Roadmap проекта (план разработки)</a></li>
+                                            <li><a href="#">Архитектура решения</a></li>
+                                            <li><a href="#">Выбор технологий</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu__item">
+                                        <div class="submenu__item-lbl">[Сопровождение]</div>
+                                        <ul>
+                                            <li><a href="#">Менеджер IT-проектов</a></li>
+                                            <li><a href="#">Сопровождение IT-проекта (Управление подрядчиками)</a></li>
+                                            <li><a href="#">Подбор подрядчика</a></li>
+                                            <li><a href="#">CTO-консультант</a></li>
+                                            <li><a href="#">CTO-консультант для&nbsp;агентств</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu__item">
+                                        <div class="submenu__item-lbl">[Урегулирование конфликтов]</div>
+                                        <ul>
+                                            <li><a href="#">Урегулирование конфликтов с&nbsp;IT-подрядчиком</a></li>
+                                            <li><a href="#">Независимая техническая экспертиза</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__item-header">
                             <span>База знаний</span>
-                            <span class="link-btn__icon"><svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg></span>
+                            <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__item-header">
+                            <span>Стоимость</span>
+                            <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--social">
+                        <a href="#" class="menu__item-header">
+                            <span>[Telegram]</span>
                         </a>
                     </li>
                 </ul>
@@ -205,8 +463,6 @@
     </div>
     <div class="footer__logo" aria-hidden="true">
         <img src="img/svg/andreev-footer.svg" alt>
-        <!-- <img src="img/svg/footer-logo-part-1.svg" alt="">
-        <img src="img/svg/footer-logo-part-2.svg" alt=""> -->
     </div>
     <div class="container">
         <div class="footer__bottom">
@@ -238,7 +494,7 @@
         </button>
     </div>
 </div>
-<!--modal-->
+<!--feedback-mod-->
 <modal class="custom-scroll modal feedback-mod" id="feedback-mod">
     <div class="modal__content">
         <button type="button" class="btn btn-cross modal__close"></button>
@@ -275,6 +531,50 @@
                     </div>
                     <div class="item-form">
                         <textarea placeholder="Ваш комментарий" oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+                    </div>
+                </div>
+                <div class="form__footer">
+                    <label class="item-checkbox">
+                        <input type="checkbox">
+                        <span>Нажимая на кнопку, я принимаю условия <a href="#" target="_blank">Политики конфиденциальности</a></span>
+                    </label>
+                    <button type="submit" class="btn main-btn main-btn--dark">
+                        <span>Отправить</span>
+                        <span class="link-icon"><svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</modal>
+<!--question-mod-->
+<modal class="custom-scroll modal question-mod" id="question-mod">
+    <div class="modal__content">
+        <button type="button" class="btn btn-cross modal__close"></button>
+        <div class="custom-scroll">
+            <div class="modal__top">
+                <h2>Задать вопрос</h2>
+            </div>
+            <form class="form" onsubmit="event.preventDefault();formReset(this);openSuccessMod()">
+                <div class="form__items">
+                    <div class="item-form">
+                        <div class="item-form__inp">
+                            <input type="text" placeholder=" ">
+                            <div class="item-form__placeholder">Ваше имя</div>
+                            <button type="button" class="btn-cross item-form__reset" aria-label="Очистить поле"></button>
+                        </div>
+                        <span data-error></span>
+                    </div>
+                    <div class="item-form">
+                        <div class="item-form__inp">
+                            <input type="text" placeholder=" ">
+                            <div class="item-form__placeholder">Email</div>
+                            <button type="button" class="btn-cross item-form__reset" aria-label="Очистить поле"></button>
+                        </div>
+                        <span data-error></span>
+                    </div>
+                    <div class="item-form">
+                        <textarea placeholder="Ваш вопрос" oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
                     </div>
                 </div>
                 <div class="form__footer">

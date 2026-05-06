@@ -17,6 +17,21 @@
         gap: 16px 40px;
         align-items: start;
     }
+    &__note {
+        @include fz-18;
+        color: var(--gray-color);
+    }
+    &__btn {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+        .btn {
+            flex: 1 1 auto;
+            max-width: 419px;
+        }
+    }
     @media (max-width: $bp1) {
         &__inner {
             gap: 16px;
@@ -31,6 +46,14 @@
         }
         &__content {
             grid-column: 1/3;
+        }
+    }
+    @media (max-width: $bp5) {
+        &__btn {
+            .btn {
+                width: 100%;
+                max-width: 100%;
+            }
         }
     }
 }
