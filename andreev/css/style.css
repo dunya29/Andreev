@@ -4312,7 +4312,7 @@ p a {
   }
 
   .header__nav .container {
-    height: 100%;
+    min-height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
